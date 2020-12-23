@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introduction to Data Science</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Eric Nordmoe" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Introduction to Data Science
+### Eric Nordmoe
+### Winter 2021
+
+---
+
+
+
+
+
+
+
+# What is Data Science? 
+
+## A Picture is Worth 1000 Words
+
+
+&lt;img src="figs/Intro_to_Math295/r4ds_diagram.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## What you will learn about in this class
+
+* Importing data
+--
+
+* Wrangling data  
+    - Tidying
+--
+    - Transforming
+--
+
+* Visualization
+--
+
+* Modeling
+--
+
+* Communication
+    - Reproducible documents using R Markdown   
+--
+
+* ...and some R programming  
+
+---
+class: center, middle
+background-image: url(figs/Intro_to_Math295/r4ds_diagram_overlay.png)
+background-size: contain
+
+???
+* Programming skills you may or may not have seen before such as creating new functions, working with vectors and arrays, and using loops and conditionals will be helpful in most of the steps of a serious data science project.   
+* Once we get into the course a bit, we'll spend a few classes focusing on these techniques.
+
+---
+class: center, middle
+background-image: url(figs/Intro_to_Math295/data_wrangler.png)
+background-size: contain
+
+???
+
+By the end of this class, you should be a data wrangler.
+
+
+---
+# R and RStudio 
+
+![:scale 10%](figs/Intro_to_Math295/stickers/R_logo.svg.png) is the statistical programming language.
+
+
+--
+
+![:scale 10%](figs/Intro_to_Math295/stickers/RStudio.png) is the IDE (Integrated Development Environment). 
+
+--
+
+.center[![:scale 75%](figs/Intro_to_Math295/engine-dashboard.png)]
+
+Source: moderndive.com
+
+
+---
+
+# And a little help from their friends  
+![:scale 10%](figs/Intro_to_Math295/stickers/dplyr.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/forcats.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/ggplot2.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/knitr.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/lubridate.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/pipe.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/purrr.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/readr.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/rmarkdown.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/rvest.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/shiny.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/stringr.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/tibble.png)
+![:scale 10%](figs/Intro_to_Math295/stickers/tidyr.png)
+
+* Many fall under the umbrella of the 
+
+.center[![:scale 10%](figs/Intro_to_Math295/stickers/tidyverse.png)]
+
+
+???
+
+* R is the enginge, RStudio is the car body  
+* Packages are customizations  
+
+---
+
+# What you will not learn in this class
+
+&gt; - Python and other languages      
+&gt; - Techniques for Big Data  
+&gt; - Machine Learning  
+&gt; - Statistical inference  
+
+???
+
+* Focus on use of R; might not always be the best tool available, but this approach will let us go deep rather than flitting from one language to another. R allows for "tailored grammars" for the data science processes.
+* Why no big data? Develop tools that can be applied to bigger problems.   
+* Machine learning? It's a different course, one that Prof Erdi has taught.  
+* Stat inference: no emphasis on hypothesis testing. Two areas of statistics: Descriptive Statistics and Inferential Statistics.  
+    - Mention 80/20 rule for stats anaylses
+
+---
+
+# What you also will not learn in this class  
+
+
+* Base graphics in R (only used a little here)
+
+* The **mosaic** package
+
+* **ggformula** syntax for graphics (as used in MATH 260)
+
+???
+
+Especially relevant for those who have taken other courses with me.
+---
+
+
+# [EDIT THIS] Getting your hands dirty  
+
+## Join  RStudio Cloud
+
+
+* Go to the RStudio Group [link](https://rstudio.cloud/spaces/7916/join?access_code=i2qDCBORDh%2FQOLWyFlTSxVaAkNH2onwLLmMB4MvH) or go to http://bit.ly/2LQANFV in your browser.  
+    - Creating a new account should add you to the class.   
+    
+&gt;  Once you've finished, place a green sticky note on your laptop.  If you have questions let me know.  
+
+---
+
+
+# UN Voting Visualization 
+
+You don't need to know R yet to create your first data visualization!   
+
+- Log on to RStudio Cloud and click on this course's workspace.  
+- Make a copy of the project **Day 1 Visualisation** for this investigation and launch it.  
+- In the **Files** pane in the bottom right corner, find the file called `day1_viz.Rmd`. Open it, and then click on the "Knit" button.  Peruse the output (the `html` file).   
+- Go back to the `day1_viz.Rmd` file and put your name on top (in the `yaml` -- we'll talk about what this means later) and knit again.  
+- Then, change the country names to those you're interested in. Your spelling and capitalization must match how the countries appear in the data, so take a peek at the Appendix to confirm spelling.  
+- Knit again and  you've finished your first data visualization!  
+
+&gt; Once you've finished, place a green sticky note on your laptop.  If you have questions let me know.  
+
+---
+
+# Jobs in Data Science  
+
+## Data Scientist Jobs 
+
+&gt; Data Scientist tops Money Magazine's [list](http://time.com/money/5114734/the-50-best-jobs-in-america-and-how-much-they-pay/) of the 50 best jobs in America
+
+## Data Scientist Jobs   
+
+.center[![:scale 30%](figs/Intro_to_Math295/LinkedIn.png)]
+```
+
+???
+
+Link to Linked In page:  
+
+https://www.linkedin.com/jobs/saved/
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
