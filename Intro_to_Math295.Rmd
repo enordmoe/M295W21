@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Data Science"
+subtitle: "MATH 295"
 author: "Eric Nordmoe"
 date: "Winter 2021"
 output:
