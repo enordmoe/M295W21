@@ -31,6 +31,15 @@ library(tidyverse)
 ```{r, out.width='100%', fig.align='center', fig.cap='',echo=FALSE}
 knitr::include_graphics('figs/Intro_to_Math295/r4ds_diagram.png')
 ```
+---
+
+# Extra Slide added on iMac PC
+
+* Point 1
+
+* Point 2
+
+* Point 3
 
 ---
 
