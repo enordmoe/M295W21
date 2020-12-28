@@ -55,6 +55,15 @@ knitr::include_graphics('figs/Intro_to_Math295/r4ds_diagram.png')
 --
 
 * ...and some R programming  
+---
+# New Slide from Macbook Pro
+
+* This is just nonsense code that will need deleting
+
+```{r}
+x <- rnorm(1000)
+hist(x)
+```
 
 ---
 class: center, middle
@@ -82,6 +91,7 @@ By the end of this class, you should be a data wrangler.
 
 
 --
+
 
 ![:scale 10%](figs/Intro_to_Math295/stickers/RStudio.png) is the IDE (Integrated Development Environment). 
 
