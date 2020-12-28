@@ -33,15 +33,6 @@ knitr::include_graphics('figs/Intro_to_Math295/r4ds_diagram.png')
 ```
 ---
 
-# Extra Slide added on iMac PC
-
-* Point 1
-
-* Point 2
-
-* Point 3
-
----
 
 ## What you will learn about in this class
 
@@ -66,16 +57,7 @@ knitr::include_graphics('figs/Intro_to_Math295/r4ds_diagram.png')
 
 * ...and some R programming  
 ---
-# New Slide from Macbook Pro
 
-* This is just nonsense code that will need deleting
-
-```{r}
-x <- rnorm(1000)
-hist(x)
-```
-
----
 class: center, middle
 background-image: url(figs/Intro_to_Math295/r4ds_diagram_overlay.png)
 background-size: contain
