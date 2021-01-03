@@ -45,14 +45,15 @@ knitr::include_graphics('figs/Intro_to_Math295/r4ds_diagram.png')
     - Transforming
 --
 
-* Visualization
+* Visualization (using **ggplot2**)
 --
 
 * Modeling
 --
 
 * Communication
-    - Reproducible documents using R Markdown   
+    - Reproducible project sharing using GitHub   
+    - Reproducible documents using R Markdown reports
 --
 
 * ...and some R programming  
@@ -129,7 +130,7 @@ Source: moderndive.com
 > - Python and other languages      
 > - Techniques for Big Data  
 > - Machine Learning  
-> - Statistical inference  
+> - Statistical inference (confidence intervals and tests of significance) 
 
 ???
 
@@ -155,8 +156,150 @@ Source: moderndive.com
 Especially relevant for those who have taken other courses with me.
 
 
+---
+class: inverse, center, middle
+
+# Version Control and Collaboration
+
+---
+## You already know a little about version control if you've used ...
+
+- Google drive
+
+- Dropbox
+
+- Microsoft Word with Track Changes
+
+- Other services with "version history"
 
 
+---
+
+# Git and GitHub
+
+.pull-left[
+```{r echo=FALSE, out.width="25%"}
+knitr::include_graphics("img/git-logo.png")
+```
+- Git is a version control system -- like “Track Changes” features from Microsoft Word, on steroids
+
+- It's not the only version control system, but it's a very popular one
+
+- Was created by Linus Torvalds in 2005
+]
+.pull-right[
+```{r echo=FALSE, out.width="25%"}
+knitr::include_graphics("img/GitHub_Logo.png")
+```
+- GitHub is the home for your Git-based projects on the internet -- like Dropbox but much, much better
+
+- We will use GitHub as a platform for submitting homework and collaboration on projects
+]
+
+---
+class: top, center
+background-image: url("https://blog.devmountain.com/hs-fs/hubfs/Imported_Blog_Media/Gitvs_Github-1a-1.jpg?width=1200&name=Gitvs_Github-1a-1.jpg")
+background-size: 80%
+
+.left[.footnote[Source: https://blog.devmountain.com/git-vs-github-whats-the-difference/]]
+
+---
+
+## Versioning
+
+```{r echo=FALSE, fig.align = "center", out.width = "70%"}
+knitr::include_graphics("img/lego-steps.png")
+```
+
+Source: [Data Science in a Box](https://datasciencebox.org/)
+???
+
+Note that in a real construction project, progress is not so linear. There may be work going on in several parts of the building.
+---
+
+## Versioning
+### with human readable commit messages
+
+```{r echo=FALSE, fig.align = "center", out.width = "60%"}
+knitr::include_graphics("img/lego-steps-commit-messages.png")
+```
+
+???
+
+
+---
+
+## Why do we need version control?
+
+```{r echo=FALSE, fig.align = "center", out.width="25%"}
+knitr::include_graphics("img/phd_comics_vc.gif")
+```
+
+* Document project
+* Facilitate team collaboration
+* Share work
+
+
+---
+
+## How will we use Git and GitHub?
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/m295whole-game-01.png")
+```
+
+---
+
+## How will we use Git and GitHub?
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/m295whole-game-02.png")
+```
+
+---
+
+## How will we use Git and GitHub?
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/m295whole-game-03.png")
+```
+
+---
+
+## How will we use Git and GitHub?
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/m295whole-game-04.png")
+```
+
+---
+
+# Git and GitHub tips
+
+- Becoming Git masters is beyond the scope of the course.
+
+- Using the RStudio server to interface with GitHub will allow us to focus on just a few commands and avoid command line complications.
+
+--
+- For much more on working with git and R, consult  [happygitwithr.com](http://happygitwithr.com/). 
+
+---
+
+## In-Class Activity
+
+* Creating your first repository
+
+* Your first commit
+
+* Finding your way around on the GitHub site
+
+
+
+<br>
+
+*Next time...*
+
+*We get RStudio and GitHub to exchange credentials...*
 
 
 
