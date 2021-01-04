@@ -34,7 +34,7 @@ library(tidyverse)
 
 * Gain awareness of available references
 
-* Use RMarkdown to create a simple resume that will be pushed to a GitHub repository
+* Use RMarkdown to create a document that will be pushed to a GitHub repository
  
 
 ---
