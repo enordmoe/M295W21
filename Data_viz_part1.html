@@ -72,7 +72,7 @@ class: center, middle, inverse, title-slide
 ## 10 chevrolet    malibu                   3.6 f        26
 ```
 
-**Task:**  Make a hand-drawn graph that shows the relationship between engine displacement (`dis`) and highway mileage (`hwy`). For each point in your graph, identify  the  drivetrain (`drv`) of the vehicle. 
+**Task:**  Make a hand-drawn graph that shows the relationship between engine displacement (`displ`) and highway mileage (`hwy`). For each point in your graph, identify  the  drivetrain (`drv`) of the vehicle. 
 
 ---
 
@@ -195,7 +195,7 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy))
 ```
 
-![](Data_viz_part1_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+![](Data_viz_part1_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
 
 ... but this does not?  
 
@@ -264,7 +264,7 @@ ggplot(data = mpg) +
    geom_point(mapping = aes(x = displ, y = hwy, size = cyl))
 ```
 
-![](Data_viz_part1_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+![](Data_viz_part1_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -279,7 +279,7 @@ ggplot(data = mpg) +
    geom_point(mapping = aes(x = displ, y = hwy),  size = 0.5)
 ```
 
-![](Data_viz_part1_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+![](Data_viz_part1_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
 
 ---
 class: inverse, center, middle, 
