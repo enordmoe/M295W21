@@ -135,7 +135,7 @@ Other commonly used position adjustments
 # Other position examples
 ## Example 1a Standard Scatterplot
 
-```{r}
+```{r, fig.height = 4}
 p2 <- ggplot(mpg, aes(cty, hwy))
 p2 + geom_point()
 ```
