@@ -39,9 +39,9 @@ library(tidyverse)
 
 # Warm-up Question  
 
-Question: What does this plot do?
+Question: What will this code chunk produce?
 
-```{r, message = FALSE, fig.height = 3}
+```{r, message = FALSE, fig.height = 3, eval=FALSE}
 ggplot(mpg, aes(x = displ, y = hwy, color = drv)) + 
   geom_point() +
   geom_smooth() +
