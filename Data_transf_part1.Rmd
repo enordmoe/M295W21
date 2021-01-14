@@ -221,12 +221,6 @@ For selecting specific variables or groups of variables with similar names or di
 
 ![](https://magrittr.tidyverse.org/logo.png)
 
----
-
-## Connect `filter()` and `select()` with the Pipe 
-
-???
-Insert basic example
 
 ---
 
@@ -260,7 +254,7 @@ knitr::include_graphics('figures/mutate.png')
 # summarise() 
 
 ```{r, out.width='100%', fig.align='center', fig.cap='',echo=FALSE}
-knitr::include_graphics('figures/filter.png')
+knitr::include_graphics('figures/summarise.png')
 ```
 
 .footnote[Source: Data Transformation with `dplyr`: CHEAT SHEET]
