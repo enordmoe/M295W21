@@ -65,20 +65,19 @@ mpg
 
 ```
 ## # A tibble: 234 x 11
-##    manufacturer model displ  year   cyl trans drv     cty
-##    &lt;chr&gt;        &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
-##  1 audi         a4      1.8  1999     4 auto… f        18
-##  2 audi         a4      1.8  1999     4 manu… f        21
-##  3 audi         a4      2    2008     4 manu… f        20
-##  4 audi         a4      2    2008     4 auto… f        21
-##  5 audi         a4      2.8  1999     6 auto… f        16
-##  6 audi         a4      2.8  1999     6 manu… f        18
-##  7 audi         a4      3.1  2008     6 auto… f        18
-##  8 audi         a4 q…   1.8  1999     4 manu… 4        18
-##  9 audi         a4 q…   1.8  1999     4 auto… 4        16
-## 10 audi         a4 q…   2    2008     4 manu… 4        20
-## # … with 224 more rows, and 3 more variables: hwy &lt;int&gt;,
-## #   fl &lt;chr&gt;, class &lt;chr&gt;
+##    manufacturer model      displ  year   cyl trans      drv     cty   hwy fl    class  
+##    &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  
+##  1 audi         a4           1.8  1999     4 auto(l5)   f        18    29 p     compact
+##  2 audi         a4           1.8  1999     4 manual(m5) f        21    29 p     compact
+##  3 audi         a4           2    2008     4 manual(m6) f        20    31 p     compact
+##  4 audi         a4           2    2008     4 auto(av)   f        21    30 p     compact
+##  5 audi         a4           2.8  1999     6 auto(l5)   f        16    26 p     compact
+##  6 audi         a4           2.8  1999     6 manual(m5) f        18    26 p     compact
+##  7 audi         a4           3.1  2008     6 auto(av)   f        18    27 p     compact
+##  8 audi         a4 quattro   1.8  1999     4 manual(m5) 4        18    26 p     compact
+##  9 audi         a4 quattro   1.8  1999     4 auto(l5)   4        16    25 p     compact
+## 10 audi         a4 quattro   2    2008     4 manual(m6) 4        20    28 p     compact
+## # … with 224 more rows
 ```
 
 ---
@@ -92,24 +91,20 @@ flights
 
 ```
 ## # A tibble: 336,776 x 19
-##     year month   day dep_time sched_dep_time dep_delay
-##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;
-##  1  2013     1     1      517            515         2
-##  2  2013     1     1      533            529         4
-##  3  2013     1     1      542            540         2
-##  4  2013     1     1      544            545        -1
-##  5  2013     1     1      554            600        -6
-##  6  2013     1     1      554            558        -4
-##  7  2013     1     1      555            600        -5
-##  8  2013     1     1      557            600        -3
-##  9  2013     1     1      557            600        -3
-## 10  2013     1     1      558            600        -2
-## # … with 336,766 more rows, and 13 more variables:
-## #   arr_time &lt;int&gt;, sched_arr_time &lt;int&gt;,
-## #   arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
-## #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
-## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
-## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time arr_delay carrier flight
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;    &lt;int&gt;
+##  1  2013     1     1      517            515         2      830            819        11 UA        1545
+##  2  2013     1     1      533            529         4      850            830        20 UA        1714
+##  3  2013     1     1      542            540         2      923            850        33 AA        1141
+##  4  2013     1     1      544            545        -1     1004           1022       -18 B6         725
+##  5  2013     1     1      554            600        -6      812            837       -25 DL         461
+##  6  2013     1     1      554            558        -4      740            728        12 UA        1696
+##  7  2013     1     1      555            600        -5      913            854        19 B6         507
+##  8  2013     1     1      557            600        -3      709            723       -14 EV        5708
+##  9  2013     1     1      557            600        -3      838            846        -8 B6          79
+## 10  2013     1     1      558            600        -2      753            745         8 AA         301
+## # … with 336,766 more rows, and 8 more variables: tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
+## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;
 ```
 
 ---
@@ -123,20 +118,19 @@ heroes
 
 ```
 ## # A tibble: 599 x 7
-##    name  gender hair_color height publisher alignment
-##    &lt;chr&gt; &lt;fct&gt;  &lt;fct&gt;       &lt;dbl&gt; &lt;fct&gt;     &lt;fct&gt;    
-##  1 A-Bo… Male   No Hair       203 Marvel C… good     
-##  2 Abin… Male   No Hair       185 DC Comics good     
-##  3 Abom… Male   No Hair       203 Marvel C… bad      
-##  4 Abra… Male   Black          NA Marvel C… bad      
-##  5 Abso… Male   No Hair       193 Marvel C… bad      
-##  6 Adam… Male   Blond         185 DC Comics good     
-##  7 Agen… Female Blond         173 Marvel C… good     
-##  8 Agen… Male   Brown         178 Marvel C… good     
-##  9 Agen… Male   &lt;NA&gt;          191 Marvel C… good     
-## 10 Air-… Male   White         188 Marvel C… bad      
-## # … with 589 more rows, and 1 more variable:
-## #   weight &lt;dbl&gt;
+##    name          gender hair_color height publisher     alignment weight
+##    &lt;chr&gt;         &lt;fct&gt;  &lt;fct&gt;       &lt;dbl&gt; &lt;fct&gt;         &lt;fct&gt;      &lt;dbl&gt;
+##  1 A-Bomb        Male   No Hair       203 Marvel Comics good         441
+##  2 Abin Sur      Male   No Hair       185 DC Comics     good          90
+##  3 Abomination   Male   No Hair       203 Marvel Comics bad          441
+##  4 Abraxas       Male   Black          NA Marvel Comics bad           NA
+##  5 Absorbing Man Male   No Hair       193 Marvel Comics bad          122
+##  6 Adam Strange  Male   Blond         185 DC Comics     good          88
+##  7 Agent 13      Female Blond         173 Marvel Comics good          61
+##  8 Agent Bob     Male   Brown         178 Marvel Comics good          81
+##  9 Agent Zero    Male   &lt;NA&gt;          191 Marvel Comics good         104
+## 10 Air-Walker    Male   White         188 Marvel Comics bad          108
+## # … with 589 more rows
 ```
 
 ---
@@ -267,12 +261,6 @@ For selecting specific variables or groups of variables with similar names or di
 
 ![](https://magrittr.tidyverse.org/logo.png)
 
----
-
-## Connect `filter()` and `select()` with the Pipe 
-
-???
-Insert basic example
 
 ---
 
@@ -301,7 +289,7 @@ Insert basic example
 ---
 # summarise() 
 
-&lt;img src="figures/filter.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figures/summarise.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 .footnote[Source: Data Transformation with `dplyr`: CHEAT SHEET]
     </textarea>
