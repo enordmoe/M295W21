@@ -108,12 +108,14 @@ ggplot(cardata) +
 
 * The code to pre-process to get the names in order:
 
+.scroll-box-14[
 ```{r}
 ordered_carnames <- cardata %>% 
   count(make, sort = TRUE) %>%
   pull(make)
 ordered_carnames
 ```
+]
 ---
 
 # The Resulting Graph
