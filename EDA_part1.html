@@ -78,7 +78,7 @@ Understand:
     
 * Continuous variables
     + Histograms: `geom_histogram()`
-    + Frequency polygons: `geom_poly()`
+    + Frequency polygons: `geom_freqpoly()`
     
 ---
 
@@ -144,7 +144,7 @@ ordered_carnames
 
 ```r
 ggplot(cardata) + 
-  geom_bar(aes(x = make, y = ..prop.., group = 1)) +
+  geom_bar(aes(x = make, y = stat(prop), group = 1)) +
   theme(axis.text.x=element_text(angle=90, hjust=1)) + 
   scale_x_discrete(limits = ordered_carnames) + 
   labs(x = "Car Makes", y = "Proportion of All\n  Models Tested")
@@ -218,7 +218,7 @@ class: inverse, center, middle
 
 # Histograms with Proportions
 
-To show the  proportions (relative frequency) in each inerval, try the following:
+To show the  proportions (relative frequency) in each interval, try the following:
 
 
 ```r
