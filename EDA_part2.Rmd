@@ -146,7 +146,7 @@ ggplot(data = cardata, aes(x = factor(year), y = hwy, color = factor(year))) +
 ```
 
 ---
-### Boxplot example comparing  mileage ascending by year
+### Boxplot example comparing  mileage ascending by median mileage
 
 ```{r,fig.height=5}
 ggplot(data = cardata, aes(x =  reorder(factor(year), -hwy, median), y = hwy, color = factor(year))) + 
