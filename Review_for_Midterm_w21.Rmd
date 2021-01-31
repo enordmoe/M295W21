@@ -4,10 +4,11 @@ subtitle: "Introduction to Data Science"
 author: "Introduction to Data Science"
 date: "E. Nordmoe"
 output: 
-  github_document: 
+  html_document: 
     fig_height: 4
     fig_width: 6
     toc: true
+    toc_float: true
     toc_depth: 2
 ---
 
