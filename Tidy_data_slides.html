@@ -223,10 +223,12 @@ Pivoting **table4** into a longer, tidy form
 ```
 df %&gt;% 
   pivot_longer(columns, names_to = key, values_to = value, 
-    variables, ..., values_drop_na = FALSE)
+     ..., values_drop_na = FALSE)
 ```
 
 Referring to sample `table4a` : 
+
+* `columns` specifies the columns to pivot into the longer format
 
 * `key` specifies the name of the variable whose values form the column names  
     + year  
@@ -234,7 +236,6 @@ Referring to sample `table4a` :
 * `value` specifies the variable whose values are spread over the cells 
     + number of `cases` or `population`  
     
-* `variables` are the columns in the data that represent values rather than variables
     
 **Note:** `key` and `value` are new columns whose names you specify. 
 
