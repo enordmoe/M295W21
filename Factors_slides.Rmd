@@ -118,26 +118,28 @@ class: inverse, center, middle
     
     + Learning related questions for students
     
-* `multipleChoiceResponses.csv` contains over 16K rows and 228 variables
+* [`multipleChoiceResponses.csv`](https://www.kaggle.com/kaggle/kaggle-survey-2017?select=multipleChoiceResponses.csv) contains over 16K rows and 228 variables
 
-.footnoe[
-**Source**: Kaggle https://www.kaggle.com/arthurtok/2017-state-of-data-science-kaggle-survey
+.footnote[
+**Source**: Kaggle https://www.kaggle.com/kaggle/kaggle-survey-2017
 ]
 
+
 ---
-  
-# Data codebook in `schema.csv`  
+## Data codebook in `schema.csv`  
 
 ```{r, out.height = '100%', fig.align='center', fig.cap='',echo=FALSE}
 knitr::include_graphics('figures/kaggle_schema_lg.png')
 ```
+---
+## Import and Glimpse the Data
 
-## Import and Glimpse the Data {.smaller}
-
+.scroll-box-20[
 ```{r, message = FALSE}
 ks_data <- read_csv(file = "kaggle-survey-2017_data/multipleChoiceResponses.csv")
 glimpse(ks_data)
 ```
+]
 
 Lots of data problems we'll set aside for later...
 
@@ -151,6 +153,7 @@ knitr::include_graphics('figures/inspect_factors.png')
 ---
 # Inspecting the Country Variable
 
+.scroll-box-20[
 ```{r}
 # First, convert to a factor, letting R choose levels:  
 ks_data <-  ks_data %>% 
@@ -158,7 +161,7 @@ ks_data <-  ks_data %>%
 # Show unique levels
 fct_unique(ks_data$Country)
 ```
-
+]
 ---
 # Get frequencies of categories
 
@@ -181,13 +184,13 @@ ggplot(ks_data, aes(x = Country)) +
 
 * Reorder by frequency of categories:
 
-```{r, out.height = '100%', fig.align='center', fig.cap='',echo=FALSE}
+```{r, out.width = '80%', fig.align='center', fig.cap='',echo=FALSE}
 knitr::include_graphics('figures/fct_infreq.png')
 ```
 
 * Reorder by level of another variable:
 
-```{r, out.height = '100%', fig.align='center', fig.cap='',echo=FALSE}
+```{r, out.width = '80%', fig.align='center', fig.cap='',echo=FALSE}
 knitr::include_graphics('figures/fct_reorder.png')
 ```
 

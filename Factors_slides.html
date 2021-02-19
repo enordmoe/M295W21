@@ -130,20 +130,21 @@ class: inverse, center, middle
     
     + Learning related questions for students
     
-* `multipleChoiceResponses.csv` contains over 16K rows and 228 variables
+* [`multipleChoiceResponses.csv`](https://www.kaggle.com/kaggle/kaggle-survey-2017?select=multipleChoiceResponses.csv) contains over 16K rows and 228 variables
 
-.footnoe[
-**Source**: Kaggle https://www.kaggle.com/arthurtok/2017-state-of-data-science-kaggle-survey
+.footnote[
+**Source**: Kaggle https://www.kaggle.com/kaggle/kaggle-survey-2017
 ]
 
+
 ---
-  
-# Data codebook in `schema.csv`  
+## Data codebook in `schema.csv`  
 
 &lt;img src="figures/kaggle_schema_lg.png" width="1920" height="100%" style="display: block; margin: auto;" /&gt;
+---
+## Import and Glimpse the Data
 
-## Import and Glimpse the Data {.smaller}
-
+.scroll-box-20[
 
 ```r
 ks_data &lt;- read_csv(file = "kaggle-survey-2017_data/multipleChoiceResponses.csv")
@@ -382,6 +383,7 @@ glimpse(ks_data)
 ## $ JobFactorDiversity                          &lt;chr&gt; NA, NA, "Very Important", NA, NA…
 ## $ JobFactorPublishingOpportunity              &lt;chr&gt; NA, NA, "Very Important", NA, NA…
 ```
+]
 
 Lots of data problems we'll set aside for later...
 
@@ -393,6 +395,7 @@ Lots of data problems we'll set aside for later...
 ---
 # Inspecting the Country Variable
 
+.scroll-box-20[
 
 ```r
 # First, convert to a factor, letting R choose levels:  
@@ -431,7 +434,7 @@ fct_unique(ks_data$Country)
 ## [51] United States               Vietnam                    
 ## 52 Levels: Argentina Australia Belarus Belgium Brazil Canada Chile ... Vietnam
 ```
-
+]
 ---
 # Get frequencies of categories
 
@@ -475,11 +478,11 @@ ggplot(ks_data, aes(x = Country)) +
 
 * Reorder by frequency of categories:
 
-&lt;img src="figures/fct_infreq.png" width="1719" height="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figures/fct_infreq.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 * Reorder by level of another variable:
 
-&lt;img src="figures/fct_reorder.png" width="1853" height="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figures/fct_reorder.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Let's reorder by frequency 
