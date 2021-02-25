@@ -1,5 +1,5 @@
 ---
-title: "Chapters 18 and 19 Pipes and Functions"
+title: "Chapters 18 and 19: Pipes and Functions"
 subtitle: "MATH 295"
 author: "Eric Nordmoe"
 output:
@@ -28,7 +28,7 @@ library(rvest)
 ```
 
 
-# Outline
+# Agenda
 
 * The pipe
 
