@@ -8,7 +8,6 @@ purrr
 dplyr
 stringr
 forcats
-shiny
 lubridate
 xml2
 rvest
