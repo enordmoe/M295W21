@@ -597,9 +597,7 @@ top_100_shows
 
 ```{r eval=FALSE}
 scrape_show_info <- function(x){
-### <b> 
-  Sys.sleep(runif(1)) 
-### </b>   
+  Sys.sleep(runif(1))  #<<
   ...
 
 }
