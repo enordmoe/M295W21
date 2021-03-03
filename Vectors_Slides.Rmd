@@ -350,7 +350,7 @@ x
 x - mean(x)
 #   tidyverse gives errors if recycle anything but a scalar, since can be dangerous
 1:10 + 1:2
-1:10 + 1:3  # this will produce an error
+1:10 + 1:3  # this will produce a warning
 tibble(x = 1:4, y = 1:2) # this will produce an error
 tibble(x = 1:4, y = rep(1:2, 2))
 tibble(x = 1:4, y = rep(1:2, each = 2))
@@ -361,7 +361,7 @@ tibble(x = 1:4, y = rep(1:2, each = 2))
 ## Review of Subsetting Vectors: Part 1 
 
 ```{r, eval = FALSE}
- 1. can subset a vector using a numeric vector containing only integers
+# 1. can subset a vector using a numeric vector containing only integers
 #    where negatives indicate drops
 x <- c("one", "two", "three", "four", "five")
 x[c(3, 2, 5)]
