@@ -158,13 +158,12 @@ map_chr(mean, df)
 map_int(mean, df)
 ```
 
-## Recall Scrapring Script
+## Recall Scraping Script
 
 * Uses `map_df` to create a data frame by binding rows
 
 ```{r, eval = FALSE}
 map_df(urls, scrape_show_info)
-```
 ```
 
 
