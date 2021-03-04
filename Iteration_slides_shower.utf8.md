@@ -10,14 +10,9 @@ output:
 ---
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, cache = TRUE)
-```
 
-```{r packages, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(purrr)
-```
+
+
 
 ## 21. Iteration: Loops and purrr { .white }
 
@@ -53,7 +48,8 @@ E. Nordmoe
     
 ## A Basic Loop 
 
-```{r, eval = FALSE}
+
+```r
 output <- vector("double", ncol(df))  # 1. output
 for (i in seq_along(df)) {            # 2. sequence
   output[[i]] <- median(df[[i]])      # 3. body
@@ -73,7 +69,8 @@ output
 ## Generalize to use a loop to create a function  
 
 * Get all means of a data frame  
-```{r, eval = FALSE}
+
+```r
 col_mean <- function(df) {
   output <- vector("double", length(df))
   for (i in seq_along(df)) {
@@ -101,7 +98,8 @@ col_mean(mtcars)
 ## Modify Data Frame: Standardize  
 
 Step 1: Create the Function   
-```{r}
+
+```r
 standardize <- function(x) {
 xbar <- mean(x, na.rm = TRUE)
 sdx <- sd(x,na.rm = TRUE)
@@ -113,7 +111,8 @@ sdx <- sd(x,na.rm = TRUE)
 
 Step 2: Apply the function by looping  
 
-```{r, eval = FALSE}
+
+```r
 for (i in seq_along(mtcars)) { 
   mtcars[[i]] <- standardize(mtcars[[i]])
 }
@@ -125,7 +124,8 @@ head(mtcars)
 
 * Following is abstraction of `col_mean()` and `col_median()` functions.  
 * Arguments are data frame and function
-```{r, eval = FALSE}
+
+```r
 col_summary <- function(df, fun) {
   out <- vector("double", length(df))
   for (i in seq_along(df)) {
@@ -149,7 +149,8 @@ col_summary(df, mean)
 
 ## Try these on `mtcars`  
 
-```{r, eval = FALSE}
+
+```r
 map(df, mean)
 map_dbl(df, mean)
 # Or even this? 
@@ -162,14 +163,16 @@ map_int(df, mean)
 
 * Uses `map_df` to create a data frame by binding rows
 
-```{r, eval = FALSE}
+
+```r
 map_df(urls, scrape_show_info)
 ```
 
 
 ## Mapping over two arguments: `map2()`  
 
-```{r, eval = FALSE}
+
+```r
 # mu and sigma are the arguments  
 # rnorm is the function
 mu = list(5, 10, -3)
@@ -179,7 +182,8 @@ map2(mu, sigma, rnorm, n = 5)
 
 ## Mapping over multiple arguments: `pmap()`
 
-```{r, eval = FALSE}
+
+```r
 pmap(list(mu,sigma), rnorm, n = 5)
 # or more generally  
 n = list(1, 3, 5)
@@ -195,7 +199,8 @@ https://github.com/rstudio/cheatsheets/raw/master/purrr.pdf
 
 ## Advanced functional programming!  
 
-```{r, eval = FALSE}
+
+```r
 fun <- function(f) pmap(list(x = mtcars, na.rm = TRUE), f)
 param <- list(list(mean), list(median), list(sd))
 
