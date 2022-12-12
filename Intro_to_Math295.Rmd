@@ -1,8 +1,8 @@
 ---
 title: "Introduction to Data Science"
-subtitle: "MATH 295"
+subtitle: "MATH 265"
 author: "Eric Nordmoe"
-date: "Winter 2021"
+date: "Winter 2023"
 output:
   xaringan::moon_reader:
     lib_dir: libs
