@@ -1,6 +1,6 @@
 ---
 title: "Introduction to R and RMarkdown"
-subtitle: "MATH 295"
+subtitle: "MATH 295 New Try"
 author: "Eric Nordmoe"
 date: "Winter 2021"
 output:
